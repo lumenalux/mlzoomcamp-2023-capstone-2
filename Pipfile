@@ -11,6 +11,7 @@ joblib = "*"
 numpy = "*"
 pandas = "*"
 requests = "*"
+waitress = "*"
 
 [dev-packages]
 
