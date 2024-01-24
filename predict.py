@@ -1,8 +1,12 @@
+import warnings
+
 from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
 import joblib
 import pandas as pd
-import xgboost as xgb
+
+# disable warnings
+warnings.filterwarnings('ignore')
 
 app = Flask(__name__)
 CORS(app)
@@ -10,8 +14,6 @@ CORS(app)
 # Load models
 logistic_regression_model = joblib.load('models/logistic_regression_model.pkl')
 random_forest_model = joblib.load('models/random_forest_model.pkl')
-xgboost_model = xgb.Booster()
-xgboost_model.load_model('models/xgboost_model.bin')
 
 
 @app.route('/predict/logistic_regression', methods=['POST'])
@@ -37,4 +39,5 @@ def predict_random_forest():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    from waitress import serve
+    serve(app, host='0.0.0.0', port=5000)
