@@ -2,6 +2,8 @@
 
 > Link for testing: [https://capstone-2-titanic.8ge1ea5p6k6ru.eu-central-1.cs.amazonlightsail.com/](https://capstone-2-titanic.8ge1ea5p6k6ru.eu-central-1.cs.amazonlightsail.com/)
 
+![Thumbnail](docs/thumbnail.jpeg)
+
 ## Contents
 
 - [Overview](#overview)
