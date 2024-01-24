@@ -3,7 +3,6 @@ import warnings
 
 import pandas as pd
 import joblib
-import xgboost as xgb
 
 from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.impute import SimpleImputer
@@ -53,10 +52,7 @@ def train_and_save_model(model, params, X_train, y_train, model_name):
 
     os.makedirs('models', exist_ok=True)
     model_path = f'models/{model_name}'
-    if isinstance(model, xgb.XGBClassifier):
-        grid_search.best_estimator_.save_model(f'{model_path}.bin')
-    else:
-        joblib.dump(grid_search.best_estimator_, f'{model_path}.pkl')
+    joblib.dump(grid_search.best_estimator_, f'{model_path}.pkl')
 
     print(f"Model {model_name} trained and saved.")
 
@@ -93,20 +89,6 @@ def main():
         X_train,
         y_train,
         'random_forest_model'
-    )
-
-    # XGBoost
-    xgb_params = {
-        'n_estimators': [1, 2, 3],
-        'learning_rate': [0.3, 0.5, 0.7, 1.0],
-        'max_depth': [1, 2, 3]
-    }
-    train_and_save_model(
-        xgb.XGBClassifier(use_label_encoder=False, eval_metric='logloss'),
-        xgb_params,
-        X_train,
-        y_train,
-        'xgboost_model'
     )
 
     # Reset warnings to default
