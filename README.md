@@ -25,7 +25,7 @@
 
 ## Overview
 
-"ML Zoomcamp Capstone 1 Project: Would You Have Survived on the Titanic?" is an engaging and interactive project that employs machine learning to predict survival probabilities for individuals aboard the Titanic. By utilizing a [dataset with passenger details](https://www.kaggle.com/datasets/brendan45774/test-file/data) like ticket class, sex, age, and more, the project aims to build models that accurately predict survival outcomes. This project not only offers insights into historical events but also serves as a fun and educational tool to understand the application of machine learning in historical data analysis.
+"ML Zoomcamp Capstone 2 Project: Would You Have Survived on the Titanic?" is an engaging and interactive project that employs machine learning to predict survival probabilities for individuals aboard the Titanic. By utilizing a [dataset with passenger details](https://www.kaggle.com/datasets/brendan45774/test-file/data) like ticket class, sex, age, and more, the project aims to build models that accurately predict survival outcomes. This project not only offers insights into historical events but also serves as a fun and educational tool to understand the application of machine learning in historical data analysis.
 
 ## Problem Statement
 
