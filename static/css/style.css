@@ -1,0 +1,191 @@
+body {
+  background-color: #b3cde0;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-weight: 600;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.ticket {
+  width: 500px;
+  height: 1250px;
+  background-color: white;
+  margin: 25px auto;
+  position: relative;
+}
+
+.holes-top {
+  height: 50px;
+  width: 50px;
+  background-color: #b3cde0;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  margin-left: -25px;
+  top: -25px;
+}
+.holes-top:before, .holes-top:after {
+  content: "";
+  height: 50px;
+  width: 50px;
+  background-color: #b3cde0;
+  position: absolute;
+  border-radius: 50%;
+}
+.holes-top:before {
+  left: -250px;
+}
+.holes-top:after {
+  left: 250px;
+}
+
+.holes-lower {
+  position: relative;
+  margin: 25px;
+  border: 1px dashed #aaa;
+}
+.holes-lower:before, .holes-lower:after {
+  content: "";
+  height: 50px;
+  width: 50px;
+  background-color: #b3cde0;
+  position: absolute;
+  border-radius: 50%;
+}
+.holes-lower:before {
+  top: -25px;
+  left: -50px;
+}
+.holes-lower:after {
+  top: -25px;
+  left: 450px;
+}
+
+.title {
+  padding: 25px 25px 0px;
+}
+
+.ticket-name {
+  color: #aaa;
+  font-size: 22px;
+}
+
+.ticket-title {
+  font-size: 50px;
+}
+
+.info {
+  padding: 25px 25px;
+}
+
+table {
+  width: 100%;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+table tr {
+  margin-bottom: 10px;
+}
+table th {
+  text-align: left;
+}
+table th:nth-of-type(1) {
+  width: 38%;
+}
+table th:nth-of-type(2) {
+  width: 40%;
+}
+table th:nth-of-type(3) {
+  width: 15%;
+}
+table td {
+  width: 33%;
+  font-size: 32px;
+}
+
+.bigger {
+  font-size: 48px;
+}
+
+.serial {
+  padding: 25px;
+}
+.serial table {
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+.serial td {
+  width: 3px;
+  height: 50px;
+}
+
+.numbers td {
+  font-size: 16px;
+  text-align: center;
+}
+
+input[type=text],
+input[type=number],
+input[type=date],
+input[type=time],
+select {
+  width: calc(100% - 40px);
+  line-height: 40px;
+  border: none;
+  /* Remove the border */
+  border-bottom: 1px solid #000;
+  /* Add an underline to resemble the original design */
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-size: 16px;
+  text-align: left;
+  margin-bottom: 10px;
+  outline: none;
+  padding: 0 10px 0 10px;
+}
+
+input[type=submit] {
+  background-color: #aaa;
+  /* A neutral color for the button */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+}
+
+select.bigger {
+  width: calc(100% - 20px);
+  border: none;
+  border-bottom: 1px solid #000;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-size: 21px;
+  text-align-last: left;
+  line-height: 40px;
+  -moz-text-align-last: left;
+  text-align: left;
+  background: white;
+  padding: 10px 0;
+}
+
+input[type=submit] {
+  display: block;
+  margin: 20px auto;
+  font-size: 24px;
+  cursor: pointer;
+  background: black;
+  /* Other styling as needed */
+}
+
+input[type=submit]:hover {
+  background: #222;
+}
+
+th,
+td {
+  font-size: 24px;
+  padding-bottom: 15px;
+}

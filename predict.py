@@ -15,6 +15,13 @@ CORS(app)
 logistic_regression_model = joblib.load('models/logistic_regression_model.pkl')
 random_forest_model = joblib.load('models/random_forest_model.pkl')
 
+survived_status = ["NO", "YES"]
+
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+
 
 @app.route('/predict/logistic_regression', methods=['POST'])
 def predict_logistic_regression():
@@ -22,7 +29,7 @@ def predict_logistic_regression():
     try:
         df = pd.DataFrame([data])
         prediction = logistic_regression_model.predict(df)
-        return jsonify({'prediction': int(prediction[0])})
+        return jsonify({'survived': survived_status[int(prediction[0])]})
     except Exception as e:
         return jsonify({'error': "bad request"})
 
@@ -33,7 +40,7 @@ def predict_random_forest():
     try:
         df = pd.DataFrame([data])
         prediction = random_forest_model.predict(df)
-        return jsonify({'prediction': int(prediction[0])})
+        return jsonify({'survived': survived_status[int(prediction[0])]})
     except Exception as e:
         return jsonify({'error': "bad request"})
 
